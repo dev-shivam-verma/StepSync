@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/welcome_nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.stepsync.fragments.welcomeFragments.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_userNameFragment"
+            app:destination="@id/userNameFragment"
+            app:enterAnim="@anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/userNameFragment"
+        android:name="com.example.stepsync.fragments.welcomeFragments.UserNameFragment"
+        android:label="UserNameFragment"
+        tools:layout="@layout/fragment_user_name"
+        app:enterAnim="@anim/fade_in">
+        <action
+            android:id="@+id/action_userNameFragment_to_userPictureFragment"
+            app:destination="@id/userPictureFragment"
+            app:enterAnim="@anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/userPictureFragment"
+        android:name="com.example.stepsync.fragments.welcomeFragments.UserPictureFragment"
+        android:label="UserPictureFragment"
+        app:enterAnim="@anim/fade_in"
+        tools:layout="@layout/fragment_user_picture"/>
+</navigation>

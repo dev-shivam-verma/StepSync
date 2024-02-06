@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/veryLow"
+        android:title="Very Low"
+        android:icon="@drawable/dot_very_low_" />
+
+    <item android:id="@+id/low"
+        android:title="Low"
+        android:icon="@drawable/dot_low_" />
+
+    <item android:id="@+id/medium"
+        android:title="Medium"
+        android:icon="@drawable/dot_medium_" />
+
+    <item android:id="@+id/high"
+        android:title="High"
+        android:icon="@drawable/dot_high_" />
+
+    <item android:id="@+id/veryHigh"
+        android:title="Very High"
+        android:icon="@drawable/dot_very_high_" />
+
+</menu>

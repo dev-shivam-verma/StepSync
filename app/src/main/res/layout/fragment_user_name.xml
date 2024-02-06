@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvWhatsYourName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:layout_marginBottom="20sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:letterSpacing="0.1"
+        android:text="Hi! What’s\nYour Name"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="33sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@id/edUserName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/edUserName"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Enter your name"
+        android:textSize="25sp"
+        android:paddingStart="7dp"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:background="@drawable/black_outline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonNext"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20sp"
+        android:background="@drawable/black_filled_ract_"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edUserName" />
+
+    <View
+        android:id="@+id/artbuttonNext"
+        android:layout_width="42.21dp"
+        android:layout_height="32.43dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/arrows_vector_double"
+        android:rotation="180"
+        app:layout_constraintEnd_toStartOf="@id/buttonNext"
+        app:layout_constraintTop_toTopOf="@id/buttonNext"
+        app:layout_constraintBottom_toBottomOf="@id/buttonNext"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
