@@ -50,16 +50,20 @@ class UserPictureFragment : Fragment() {
 
         binding.buttonUploadPic.setOnClickListener {
             val permission = Manifest.permission.READ_MEDIA_IMAGES
+            val permission2 = Manifest.permission.READ_EXTERNAL_STORAGE
             if (ContextCompat.checkSelfPermission(
                     requireContext(),
                     permission
                 ) != PackageManager.PERMISSION_GRANTED
             ) {
-                requireActivity().requestPermissions(arrayOf(permission), PERMISSION_REQUEST_CODE)
-            } else {
-                // Permission already granted, proceed to pick image
-                pickImage()
+                requireActivity().requestPermissions(
+                    arrayOf(permission, permission2),
+                    PERMISSION_REQUEST_CODE
+                )
             }
+
+            pickImage()
+
         }
 
 
